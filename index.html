@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alliance Academy - Renault R-Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f4f5f7; }
+        .renault-logo-text { font-weight: 800; font-size: 14px; letter-spacing: -0.03em; color: #000; line-height: 1.1; }
+        .r-learning-title { font-weight: 700; font-size: 14px; letter-spacing: 0.02em; color: #000; font-family: Arial, sans-serif; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between text-xs text-gray-700">
+
+    <div>
+        <!-- TOP NAVIGATION BAR -->
+        <header class="bg-white border-b border-gray-200 h-12 flex items-center justify-between px-4 sticky top-0 z-50">
+            <!-- Left group: hamburger, logo, R-LEARNING and navigation tabs right next to it -->
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center space-x-3">
+                    <button class="text-gray-700 hover:text-black focus:outline-none text-sm">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="flex items-center space-x-2.5">
+                        <div class="renault-logo-text">
+                            Renault <span class="block text-[9px] tracking-normal font-bold">GROUP</span>
+                        </div>
+                        <div class="h-5 w-[1px] bg-gray-300"></div>
+                        <div class="r-learning-title">
+                            R-LEARNING
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nav tabs right next to R-learning -->
+                <div class="flex items-center space-x-1">
+                    <div class="flex items-center space-x-2 bg-amber-400 text-black px-3.5 py-1.5 font-medium cursor-pointer shadow-sm">
+                        <i class="fa-solid fa-sitemap text-xs"></i>
+                        <span>Mój zespół</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-gray-700 hover:bg-gray-100 px-3.5 py-1.5 cursor-pointer">
+                        <i class="fa-solid fa-table-cells text-xs text-gray-700"></i>
+                        <span>Przeglądaj</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right group: Global Search & Profile -->
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <select class="bg-gray-50 border border-gray-300 text-gray-700 text-xs rounded px-2 py-1 pr-8 focus:outline-none">
+                        <option>Wszystkie obszary...</option>
+                    </select>
+                </div>
+                <div class="relative">
+                    <input type="text" placeholder="Wprowadź tekst wyszukiwania..." class="bg-gray-50 border border-gray-300 text-xs rounded pl-2.5 pr-7 py-1 w-56 focus:outline-none">
+                    <i class="fa-solid fa-search absolute right-2.5 top-2 text-gray-400 text-xs"></i>
+                </div>
+                <button class="text-gray-600 hover:text-black"><i class="fa-solid fa-sliders text-xs"></i></button>
+                <div class="w-7 h-7 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 cursor-pointer">
+                    <i class="fa-solid fa-user text-xs"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT CONTAINER -->
+        <div class="flex">
+            <!-- LEFT SIDEBAR -->
+            <aside class="w-56 bg-white border-r border-gray-200 min-h-[calc(100vh-3rem)] py-2 select-none flex-shrink-0">
+                <ul class="space-y-0.5">
+                    <li>
+                        <a href="#" class="flex items-center px-4 py-2.5 text-gray-700 hover:bg-gray-50 space-x-3">
+                            <i class="fa-solid fa-house text-sm w-5 text-center"></i>
+                            <span>Przegląd</span>
+                        </a>
+                    </li>
+                    <li>
+                        <!-- Selected pane with soft yellow highlight and accent border -->
+                        <a href="#" class="flex items-center px-4 py-2.5 bg-amber-100 border-l-4 border-amber-500 text-black font-medium space-x-3">
+                            <i class="fa-solid fa-table-cells-large text-sm w-5 text-center text-amber-700"></i>
+                            <span>Panele</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center px-4 py-2.5 text-gray-700 hover:bg-gray-50 space-x-3">
+                            <i class="fa-solid fa-chart-pie text-sm w-5 text-center"></i>
+                            <span>Analityka</span>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- WORK AREA -->
+            <main class="flex-1 p-6 overflow-x-auto">
+                <div class="flex items-center justify-between mb-4">
+                    <h1 class="text-base font-normal text-gray-800">Zespół podstawowy</h1>
+                </div>
+
+                <!-- WIDE SEARCH & FILTER BAR -->
+                <div class="bg-white border border-gray-300 p-2 mb-4 flex items-center justify-between shadow-sm">
+                    <div class="relative flex-1 mr-4">
+                        <input type="text" placeholder="Osoba" class="w-full bg-white border border-gray-300 rounded px-3 py-1.5 text-xs focus:outline-none pr-8">
+                        <i class="fa-solid fa-search absolute right-3 top-2.5 text-gray-500 text-xs"></i>
+                    </div>
+                    <button class="flex items-center space-x-1.5 bg-gray-100 hover:bg-gray-200 border border-gray-300 px-3.5 py-1.5 rounded text-gray-700 text-xs">
+                        <i class="fa-solid fa-filter text-[10px]"></i>
+                        <span>Filtry</span>
+                        <i class="fa-solid fa-chevron-down text-[9px] ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- GRID & SIDEBAR WRAPPER -->
+                <div class="grid grid-cols-1 xl:grid-cols-4 gap-6">
+                    
+                    <!-- LEFT TABLE (TEAM MEMBERS) -->
+                    <div class="xl:col-span-3 bg-white border border-gray-300 shadow-sm">
+                        <!-- Table Header -->
+                        <div class="grid grid-cols-12 bg-gray-50 border-b border-gray-300 text-gray-600 font-semibold text-[11px] uppercase tracking-wider py-2.5 px-4">
+                            <div class="col-span-6">Nazwa</div>
+                            <div class="col-span-2 text-center">Nadchodzące</div>
+                            <div class="col-span-2 text-center">Zaległe</div>
+                            <div class="col-span-2 text-center">Zatwierdzenie</div>
+                        </div>
+
+                        <!-- Rows Data -->
+                        <div id="team-list" class="divide-y divide-gray-200"></div>
+
+                        <!-- Table Pagination Footer -->
+                        <div class="p-3 border-t border-gray-200 text-gray-600 text-xs">
+                            1-8 z 8
+                        </div>
+                    </div>
+
+                    <!-- RIGHT WIDGETS COLUMN -->
+                    <div class="space-y-4">
+                        <!-- Widget 1: Pending Approvals -->
+                        <div class="bg-white border border-gray-300 shadow-sm p-3">
+                            <div class="flex justify-between items-center text-xs font-semibold text-gray-800 mb-2">
+                                <span>Oczekujące na zatwie... 0</span>
+                                <i class="fa-solid fa-chevron-down text-[10px] text-gray-500"></i>
+                            </div>
+                            <div class="border border-gray-300 bg-gray-50 p-2 text-xs font-semibold text-gray-700 flex justify-between items-center cursor-pointer">
+                                <span>WGLĄD</span>
+                                <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                            </div>
+                        </div>
+
+                        <!-- Widget 2: Działania Zespołu -->
+                        <div class="bg-white border border-gray-300 shadow-sm">
+                            <div class="border-b border-gray-300 px-4 py-2.5 bg-gray-50">
+                                <h3 class="font-bold text-xs uppercase tracking-wide text-gray-800">DZIAŁANIA ZESPOŁU</h3>
+                            </div>
+                            <div class="p-4 space-y-3 text-xs">
+                                <a href="#" class="block text-blue-600 hover:underline">Przypisz szkolenia</a>
+                                <a href="#" class="block text-blue-600 hover:underline">Simplified Assign Learning</a>
+                                <a href="#" class="block text-blue-600 hover:underline">Żądanie szkolenia</a>
+                                <a href="#" class="block text-blue-600 hover:underline">Otwórz schemat organizacyjny</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-gray-200 py-3 px-6 flex justify-between items-center text-gray-500 text-[11px]">
+        <div>
+            <a href="#" class="hover:underline text-blue-600">Terms and Conditions</a> | <a href="#" class="hover:underline text-blue-600">Privacy</a>
+        </div>
+        <div class="flex items-center space-x-1">
+            <span>Obsługiwane przez</span>
+            <span class="font-bold text-red-600 flex items-center"><i class="fa-solid fa-circle text-[6px] mr-0.5"></i> cornerstone</span>
+        </div>
+    </footer>
+
+    <script>
+        const members = [
+            { name: "BARTŁOMIEJ TUKINDORF", role: "Specjalista wydawania samochodów _PL", time: "(GMT+01:00) Sarajevo, Skopje, Sofia, Warszawa, Zagrzeb : 1:05 PM" },
+            { name: "DARIUSZ KWIECIEŃ", role: "Specjalista wydawania samochodów _PL", time: "(GMT+01:00) Sarajevo, Skopje, Sofia, Warszawa, Zagrzeb : 1:05 PM" },
+            { name: "ADRIAN ROGALSKI", role: "Sprzedawca Samochodów Nowych_PL", time: "(GMT+01:00) Sarajevo, Skopje, Sofia, Warszawa, Zagrzeb : 1:05 PM" },
+            { name: "JAKUB JURCZAK", role: "Sprzedawca Samochodów Nowych_PL", time: "(GMT+01:00) Sarajevo, Skopje, Sofia, Warszawa, Zagrzeb : 1:05 PM" },
+            { name: "ŁUKASZ DYMKOWSKI", role: "Sprzedawca Samochodów Nowych_PL", time: "(GMT+01:00) Sarajevo, Skopje, Sofia, Warszawa, Zagrzeb : 1:05 PM" },
+            { name: "KACPER CZARNECKI", role: "Sprzedawca Samochodów Nowych_PL", time: "(GMT+01:00) Sarajevo, Skopje, Sofia, Warszawa, Zagrzeb : 1:05 PM" },
+            { name: "KAROL PAPENFUS", role: "Sprzed.sam.dostawczych_PL", time: "(GMT+01:00) Sarajevo, Skopje, Sofia, Warszawa, Zagrzeb : 1:05 PM" },
+            { name: "PAWEŁ KOZŁOWSKI", role: "Sprzed.sam.dostawczych_PL", time: "(GMT+01:00) Sarajevo, Skopje, Sofia, Warszawa, Zagrzeb : 1:05 PM" }
+        ];
+
+        const container = document.getElementById('team-list');
+        container.innerHTML = members.map(m => `
+            <div class="grid grid-cols-12 py-3 px-4 items-center hover:bg-gray-50 transition-colors">
+                <div class="col-span-6 flex items-start space-x-3">
+                    <div class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 flex-shrink-0 mt-0.5">
+                        <i class="fa-solid fa-user text-sm"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center space-x-1.5">
+                            <span class="font-bold text-gray-900">${m.name}</span>
+                            <!-- Czysty zielony ptaszek bez żadnego koła w tle -->
+                            <i class="fa-solid fa-check text-green-600 text-xs font-bold" title="Zatwierdzone"></i>
+                        </div>
+                        <div class="text-gray-600 text-[11px]">${m.role}</div>
+                        <div class="text-gray-400 text-[10px]">${m.time}</div>
+                        <div class="mt-1">
+                            <a href="#" class="text-blue-600 hover:underline text-[11px] inline-flex items-center space-x-1">
+                                <span>Przejdź do</span>
+                                <i class="fa-solid fa-chevron-down text-[9px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-2 text-center font-medium text-gray-800">0</div>
+                <div class="col-span-2 text-center font-medium text-gray-800">0</div>
+                <div class="col-span-2 text-center font-medium text-gray-800">0</div>
+            </div>
+        `).join('');
+    </script>
+</body>
+</html>
